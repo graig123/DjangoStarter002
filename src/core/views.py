@@ -7,7 +7,7 @@ from django.http import JsonResponse, HttpRequest
 #    return JsonResponse({'status':'Love','hostname': os.getenv('HOSTNAME', 'unspecified')})
 
 #@login_required(login_url="/login/")
-def index(request):
+def index_view(request):
 
     html_template = loader.get_template('index.html')
     context = {'powerchip' :'Eset - SmartIt Importer',
