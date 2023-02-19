@@ -1,0 +1,32 @@
+version: "3.6"
+services:
+  db_django:
+    container_name: db_django
+    restart: always
+    image: mysql:5.7
+    volumes:
+      - ./data/app_msql:/var/lib/mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: 'db_app'
+      MYSQL_USER: 'dbadmin'
+      MYSQL_PASSWORD: 'changeme4321#%'
+      MYSQL_ROOT_PASSWORD: 'changeme4321#%'
+    networks:
+      - web_network
+
+
+  django_app:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/src
+    networks:
+      - web_network
+    command: "python3 manage.py runserver 0.0.0.0:8080"
+
+networks:
+  web_network:
+    driver: bridge

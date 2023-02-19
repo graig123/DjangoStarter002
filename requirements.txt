@@ -1,0 +1,12 @@
+asgiref
+Django==4.1.7
+django-mysql
+pycodestyle
+pytz
+sqlparse
+Unipath
+dj-database-url
+python-decouple
+gunicorn
+whitenoise
+tzdata
