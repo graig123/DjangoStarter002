@@ -10,6 +10,6 @@ from django.http import JsonResponse, HttpRequest
 def index(request):
 
     html_template = loader.get_template('index.html')
-    context = {'powerchip' :'Eset - SmartIt Importer,
+    context = {'powerchip' :'Eset - SmartIt Importer',
            }
     return HttpResponse(html_template.render(context, request))
