@@ -15,9 +15,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import healthcheck_view
+from core.views import index_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('healthcheck/', healthcheck_view, name='healthcheck'),
+    path('powertools/', index_view, name='index'),
 ]
