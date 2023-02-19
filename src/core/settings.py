@@ -133,7 +133,8 @@ USE_L10N = True
 USE_TZ = True
 
 # add static locations here
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'src/core/static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'core/static'),
+                    os.path.join(BASE_DIR, 'src/core/static')]
 
 # set url 
 STATIC_URL = '/static/'
