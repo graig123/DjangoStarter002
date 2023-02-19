@@ -22,7 +22,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./src:/src
+      - ./src:/opt/app/src
     networks:
       - web_network
     command: "python3 manage.py runserver 0.0.0.0:8080"
