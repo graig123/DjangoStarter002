@@ -134,8 +134,8 @@ USE_TZ = True
 
 # add static locations here
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'core/static'),
-                    #os.path.join(BASE_DIR, 'my_app/static')]
-
+                    #os.path.join(BASE_DIR, 'my_app/static')
+                   ]
 # set url 
 STATIC_URL = '/static/'
 
