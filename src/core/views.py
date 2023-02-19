@@ -9,7 +9,7 @@ from django.http import JsonResponse, HttpRequest, HttpResponse
 #@login_required(login_url="/login/")
 def index_view(request):
 
-    html_template = loader.get_template('index.html')
+    html_template = loader.get_template('templates/layouts/index.html')
     context = {'powerchip' :'Eset - SmartIt Importer',
            }
     return HttpResponse(html_template.render(context, request))
