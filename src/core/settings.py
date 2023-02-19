@@ -132,13 +132,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'core/static'),
-                    os.path.join(BASE_DIR, 'src/core/static')]
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-#STATIC_ROOT = os.path.join(BASE_DIR, 'core/static/')
+# add static locations here
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'src/core/static')]
+
+# set url 
 STATIC_URL = '/static/'
+
+# set location collectstatic uses to dump all staticfiles
 STATIC_ROOT = "/var/www/static/"
 
