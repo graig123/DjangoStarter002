@@ -1,6 +1,6 @@
 import os
 from django.template import loader
-from django.http import JsonResponse, HttpRequest
+from django.http import JsonResponse, HttpRequest, HttpResponse
 
 
 #def healthcheck_view(_request: HttpRequest) -> JsonResponse:
